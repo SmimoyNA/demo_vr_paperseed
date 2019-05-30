@@ -7,6 +7,7 @@ TagManager:
   - Carcaj
   - Croosbow
   - ArrowPicker
+  - Arrow
   layers:
   - Default
   - TransparentFX

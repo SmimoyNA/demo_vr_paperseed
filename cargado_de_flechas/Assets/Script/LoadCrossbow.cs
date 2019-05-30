@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class LoadCrossbow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public MonoBehaviour VC;
+	public bool handInXbow = false;
+
+
+	private void OnTriggerEnter(Collider other)
+	{
+
+		handInXbow = true;
+
+		if (other.tag == "ArrowPicker" && !handInXbow)
+		{
+			handInXbow = true;
+
+			GameObject arrow = GameObject.FindWithTag("Arrow");
+
+			arrow.transform.SetParent(this.transform);
+
+			VC.GetComponent<VirtualCarcajScript>().ArrowInHand = false;
+		}
+
+	}
 }

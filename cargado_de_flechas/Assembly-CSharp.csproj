@@ -65,7 +65,7 @@
     <Compile Include="Assets\Script\LoadCrossbow.cs" />
     <Compile Include="Assets\Script\PickUpArrow.cs" />
     <Compile Include="Assets\Script\ShootArrow.cs" />
-    <Compile Include="Assets\Script\VirtualCarcaj.cs" />
+    <Compile Include="Assets\Script\VirtualCarcajScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Mimo/Desktop/Unity/Practica/cargado_de_flechas/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
