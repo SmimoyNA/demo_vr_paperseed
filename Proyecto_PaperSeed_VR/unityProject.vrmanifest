@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.proyecto_paperseed_vr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Jaime\\Desktop\\VR_Demo\\demo_vr_paperseed\\Proyecto_PaperSeed_VR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Proyecto_PaperSeed_VR [Testing]"
+        }
+      }
+    }
+  ]
+}
