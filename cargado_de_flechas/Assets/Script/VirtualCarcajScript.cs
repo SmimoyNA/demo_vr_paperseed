@@ -20,8 +20,9 @@ public class VirtualCarcajScript : MonoBehaviour
 		if (other.tag == "ArrowPicker" && !ArrowInHand)
 		{
 			handInCarcaj = true;
-			Arrow = Instantiate(ArrowPrefab, arrowPicker.position, new Quaternion(0,0,0,0));
+			Arrow = Instantiate(ArrowPrefab);
 			Arrow.transform.SetParent(other.transform);
+			Arrow.transform.position = other.transform.position;
 			ArrowInHand = true;
 
 		}
