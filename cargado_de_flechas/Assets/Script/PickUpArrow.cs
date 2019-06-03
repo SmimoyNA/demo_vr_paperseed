@@ -11,17 +11,7 @@ public class PickUpArrow : MonoBehaviour
 	
 	
     void Update()
-    {/*
-		if (ArrowToPickUp != null && ArrowToPickUp.GetComponent<ArrowControler>().isPickable == true && PickerArrow == null)
-		{
-			if (Input.GetKeyDown(KeyCode.F))
-			{
-				PickerArrow = ArrowToPickUp;
-				PickerArrow.GetComponent<ArrowControler>().isPickable = false;
-				PickerArrow.transform.parent = this.gameObject.transform;
-				PickerArrow.transform.position = InteractionZone.position;
-				PickerArrow.GetComponent<Rigidbody>().isKinematic = true;
-			}
-		}*/
+    {
+
     }
 }
