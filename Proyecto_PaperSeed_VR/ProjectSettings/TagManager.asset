@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - ArrowPicker
+  - Carcaj
+  - Crossbow
+  - Arrow
   layers:
   - Default
   - TransparentFX

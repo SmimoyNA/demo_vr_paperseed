@@ -58,10 +58,11 @@
      <Compile Include="Assets\Scripts\ControladorVision.cs" />
      <Compile Include="Assets\Scripts\EstadoPatrulla.cs" />
      <Compile Include="Assets\Scripts\Ia.cs" />
+     <Compile Include="Assets\Scripts\LoadCrossbow.cs" />
      <Compile Include="Assets\Scripts\MaquinaDeEstado.cs" />
      <Compile Include="Assets\Scripts\PickUpArrow.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
-     <Compile Include="Assets\Scripts\VirtualCarcaj.cs" />
+     <Compile Include="Assets\Scripts\VirtualCarcajScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Jaime/Desktop/VR_Demo/demo_vr_paperseed/Proyecto_PaperSeed_VR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
