@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class VirtualCarcajScript : MonoBehaviour
 {
-	public bool handInCarcaj = false;
+	
+	private GameObject Arrow;
 	public GameObject ArrowPrefab;
+	public GameObject Crossbow;
 	public Transform arrowPicker;
 	public bool ArrowInHand = false;
-	private GameObject Arrow;
+	public bool handInCarcaj = false;
+	public int contArrow = 0;
+	
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -24,6 +28,7 @@ public class VirtualCarcajScript : MonoBehaviour
 			Arrow.transform.SetParent(other.transform);
 			Arrow.transform.position = other.transform.position;
 			ArrowInHand = true;
+			contArrow++;
 
 		}
 	}
