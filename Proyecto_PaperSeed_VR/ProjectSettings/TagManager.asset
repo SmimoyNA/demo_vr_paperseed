@@ -9,6 +9,7 @@ TagManager:
   - Carcaj
   - Crossbow
   - Arrow
+  - puntaFlecha
   layers:
   - Default
   - TransparentFX

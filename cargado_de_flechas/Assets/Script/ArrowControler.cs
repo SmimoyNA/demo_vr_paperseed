@@ -14,7 +14,6 @@ public class ArrowControler : MonoBehaviour
 
 		if(other.tag == "ArrowPicker")
 		{
-			other.GetComponentInParent<PickUpArrow>().ArrowToPickUp = arrow;
 		}
 	}
 }
