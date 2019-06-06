@@ -6,26 +6,50 @@ public class LoadCrossbow : MonoBehaviour
 {
 
 	public MonoBehaviour VC;
+	public GameObject ArrowPrefab;
+	private GameObject arrowChargered;
+	public Transform arrowPosition;
+	private Rigidbody rb;
+	public bool arrowInHand;
 	public bool handInXbow = false;
 	public bool arrowInXbow = false;
-	public Transform arrowPosition;
+	public float speed = 30f;
 
+	private void Update()
+	{
+		
+		if (Input.GetKeyDown(KeyCode.H) && arrowInXbow)
+		{
+			rb = arrowChargered.GetComponent<Rigidbody>();
+
+			rb.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+
+			rb.useGravity = true;
+
+			arrowChargered.transform.SetParent(null);
+
+		}
+
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
+		arrowInHand = VC.GetComponent<VirtualCarcajScript>().arrowInHand;
 
-		if (other.tag == "ArrowPicker" && !handInXbow && VC.GetComponent<VirtualCarcajScript>().ArrowInHand)
+		if (other.tag == "ArrowPicker" && !handInXbow && arrowInHand)
 		{
 			handInXbow = true;
 
 			if (!arrowInXbow)
 			{
-				GameObject arrow = GameObject.FindWithTag("Arrow");
-				arrow.transform.SetParent(arrowPosition);
-				arrow.transform.position = arrowPosition.position;
+				GameObject arrowHand = GameObject.FindWithTag("Arrow");
+				Destroy(arrowHand);
+				arrowInHand = false;
+				arrowChargered = Instantiate(ArrowPrefab);
+				arrowChargered.transform.SetParent(arrowPosition);
+				arrowChargered.transform.position = arrowPosition.position;
+				arrowChargered.transform.rotation = arrowPosition.rotation;
 				arrowInXbow = true;
-
-				VC.GetComponent<VirtualCarcajScript>().ArrowInHand = false;
 			}
 
 		}

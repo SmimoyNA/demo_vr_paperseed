@@ -236,15 +236,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505329757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.285, y: 1, z: 0}
+  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: -0.285, y: 0.96695864, z: 0.0028842539}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2015986842}
   - {fileID: 78224077}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
 --- !u!54 &505329759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -274,9 +274,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VC: {fileID: 1543531415}
+  ArrowPrefab: {fileID: 179842630688736843, guid: cff8bfd07ec0f6f43bd7a13ce46115af,
+    type: 3}
+  arrowPosition: {fileID: 78224077}
+  arrowInHand: 0
   handInXbow: 0
   arrowInXbow: 0
-  arrowPosition: {fileID: 78224077}
+  speed: 60
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,13 +356,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.36529583, y: -0, z: -0, w: 0.93089145}
-  m_LocalPosition: {x: -0.85, y: 1.905, z: -0.897}
+  m_LocalRotation: {x: 0.19097583, y: -0, z: -0, w: 0.98159474}
+  m_LocalPosition: {x: -0.99, y: 1.31, z: -0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 42.852, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.019001, y: 0, z: 0}
 --- !u!1 &593881457 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d50b179f5cfd583419812f1bd3046dda,
@@ -376,7 +380,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.16, z: 0.61}
+  m_Size: {x: 0.13, y: 0.16, z: 0.61}
   m_Center: {x: 0, y: 0, z: 0.24}
 --- !u!1 &1465312249
 GameObject:
@@ -420,7 +424,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.45, y: 1.09, z: 1.91}
+  m_Size: {x: 0.4, y: 0.4, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1543531412
 GameObject:
@@ -487,7 +491,7 @@ MonoBehaviour:
     type: 3}
   Crossbow: {fileID: 0}
   arrowPicker: {fileID: 1465312250}
-  ArrowInHand: 0
+  arrowInHand: 0
   handInCarcaj: 0
   contArrow: 0
 --- !u!1 &1638190408
@@ -501,7 +505,6 @@ GameObject:
   - component: {fileID: 1638190410}
   - component: {fileID: 1638190409}
   - component: {fileID: 1638190411}
-  - component: {fileID: 1638190412}
   m_Layer: 0
   m_Name: hand_left
   m_TagString: Untagged
@@ -559,21 +562,6 @@ MonoBehaviour:
   movVertical: 0
   handLeft: {fileID: 1638190409}
   speedMove: 1
---- !u!114 &1638190412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638190408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82e909539808424290530c4ded3c08f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ArrowToPickUp: {fileID: 0}
-  PickerArrow: {fileID: 0}
-  InteractionZone: {fileID: 0}
 --- !u!1 &1764947902
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +603,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764947902}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -678,15 +666,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e4d266e4bf4e78141937d80e19aeb011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.319039
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e4d266e4bf4e78141937d80e19aeb011, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5748502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e4d266e4bf4e78141937d80e19aeb011, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.30212367
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e4d266e4bf4e78141937d80e19aeb011, type: 3}
       propertyPath: m_LocalRotation.x
